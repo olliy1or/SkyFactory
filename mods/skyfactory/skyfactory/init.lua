@@ -9,8 +9,5 @@ dofile(modpath.."/skyfactory.lua")
 
 minetest.register_on_newplayer(function(player)
 	skyfactory.spawn_player(player)
-    local player = "test30"
-    local privs = minetest.get_player_privs(player)
-    privs.fly = true
-    minetest.set_player_privs(player, privs)
+	player:get_inventory():add_item("main", "trees:dirt_sapling")
 end)
